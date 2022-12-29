@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Home
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let vc = HomeViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        self.window?.rootViewController = navi
+        self.window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
